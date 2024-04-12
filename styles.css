@@ -300,11 +300,17 @@ main header {
   color: #fff;
   background: rgb(52, 87, 132);
 
-  svg {
-    height: 2rem;
-    width: 2rem;
+ 
+}
+.grid-button svg{
+ 
+    height: 1.5rem!important;
+    width: 1.5rem!important;
     color: #fff;
-  }
+
+}
+.grid-button span{
+  font-size: 1.2rem;
 }
 .header .flex-col span {
   color: #fff;
