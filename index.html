@@ -23,39 +23,248 @@
           <h2 id="selected-currency">AUDCAD</h2>
           <h4>Option</h4>
         </div>
-        <!-- <svg
-              class="svg-icon"
-              viewBox="0 0 8 6"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g fill="none" fill-rule="evenodd">
-                <g transform="translate(-1391 -130)" fill="currentColor">
-                  <g transform="translate(1250 116)">
-                    <path
-                      transform="translate(145 17) rotate(180) translate(-145 -17)"
-                      d="m145.77 14.922 2.865 3.438c0.35356 0.42428 0.29624 1.0548-0.12804 1.4084-0.17972 0.14976-0.40625 0.23178-0.64018 0.23178h-5.7299c-0.55228 0-1-0.44772-1-1 0-0.23394 0.082016-0.46047 0.23178-0.64018l2.865-3.438c0.35356-0.42428 0.98413-0.4816 1.4084-0.12804 0.046463 0.038719 0.089318 0.081574 0.12804 0.12804z"
-                    ></path>
-                  </g>
-                </g>
-              </g>
-            </svg> -->
-        <div class="custom-dropdown-menu" id="currency-menu">
-          <div class="custom-dropdown-item" data-value="OANDA:EURUSD">EUR/USD</div>
-          <div class="custom-dropdown-item" data-value="OANDA:GBPUSD">GBP/USD</div>
-          <div class="custom-dropdown-item" data-value="OANDA:USDJPY">USD/JPY</div>
-          <div class="custom-dropdown-item" data-value="OANDA:AUDUSD">AUD/USD</div>
-          <div class="custom-dropdown-item" data-value="OANDA:USDCAD">USD/CAD</div>
-          <div class="custom-dropdown-item" data-value="OANDA:BNBUSDT">BNB/USDT</div>
-          <div class="custom-dropdown-item" data-value="OANDA:BTCUSDT">BTC/USDT</div>
-          <div class="custom-dropdown-item" data-value="OANDA:DOGEUSDT">DOGE/USDT</div>
-          <div class="custom-dropdown-item" data-value="OANDA:ETCUSDT">ETC/USDT</div>
-          <div class="custom-dropdown-item" data-value="OANDA:ETHUSDT">ETH/USDT</div>
-          <div class="custom-dropdown-item" data-value="OANDA:MATICUSDT">MATIC/USDT</div>
-          <div class="custom-dropdown-item" data-value="OANDA:ETHUSDT">ETH/USDT</div>
-          <div class="custom-dropdown-item" data-value="OANDA:QNTUSDT">QNT/USDT</div>
-        </div>
-      </button>
 
+
+      </button>
+      <div class="custom-dropdown-menu" id="currency-menu">
+        <div style="display: flex; gap: .5rem; align-items: center;">
+          <button class="currency-option active">Option</button>
+          <button class="currency-option">Forex & CFD</button>
+        </div>
+        <div class="search-input">
+          <input type="text" placeholder="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          </svg>
+
+        </div>
+        <div class="mobile-currency-tabs">
+          <div class="mobile-currency-tab active" data-tab="mobile-currency-tab1">Currencies</div>
+          <div class="mobile-currency-tab" data-tab="mobile-currency-tab2">Cryptocurrencies</div>
+          <div class="mobile-currency-tab" data-tab="mobile-currency-tab3">Commodities</div>
+          <div class="mobile-currency-tab" data-tab="mobile-currency-tab4">Indices</div>
+          <div class="mobile-currency-tab-slider"></div>
+        </div>
+        <div class="mobile-currency-tab-content active" id="mobile-currency-tab1">
+          <div class="scroll-container">
+            <div class="custom-dropdown-item" data-value="OANDA:AUDCAD">
+              <div style="display: flex; gap: .4rem; align-items: center;">
+                <div class="img-overlay">
+                  <img src="./assets/au.svg" alt="" class="img-1" />
+                  <img src="./assets/cn.svg" alt="" class="img-2" />
+                </div>
+                <span style="font-size: 1rem; color: #fff;">AUD/CAD</span>
+                <span
+                  style="font-size: .6rem; color: #fff; padding: .5rem; background: rgb(255, 255, 255, 0.28); border-radius: .4rem;">OTC</span>
+              </div>
+              <span style="font-size: 1rem; color: #fff;">0.88617</span>
+              <span style="color: var(--secondary); font-size: 1rem;">92%</span>
+            </div>
+
+            <div class="custom-dropdown-item" data-value="OANDA:AUDCHF">
+              <div style="display: flex; gap: .4rem; align-items: center;">
+                <div class="img-overlay">
+                  <img src="./assets/au.svg" alt="" class="img-1" />
+                  <img src="./assets/cn.svg" alt="" class="img-2" />
+                </div>
+                <span style="font-size: 1rem; color: #fff;">AUD/CHF</span>
+                <span
+                  style="font-size: .6rem; color: #fff; padding: .5rem; background: rgb(255, 255, 255, 0.28); border-radius: .4rem;">OTC</span>
+              </div>
+              <span style="font-size: 1rem; color: #fff;">0.585314</span>
+              <span style="color: var(--secondary); font-size: 1rem;">91%</span>
+            </div>
+
+            <div class="custom-dropdown-item" data-value="OANDA:AUDJPY">
+              <div style="display: flex; gap: .4rem; align-items: center;">
+                <div class="img-overlay">
+                  <img src="./assets/au.svg" alt="" class="img-1" />
+                  <img src="./assets/cn.svg" alt="" class="img-2" />
+                </div>
+                <span style="font-size: 1rem; color: #fff;">AUD/JPY</span>
+                <span
+                  style="font-size: .6rem; color: #fff; padding: .5rem; background: rgb(255, 255, 255, 0.28); border-radius: .4rem;">OTC</span>
+              </div>
+              <span style="font-size: 1rem; color: #fff;">99.3106</span>
+              <span style="color: var(--secondary); font-size: 1rem;">90%</span>
+            </div>
+            <div class="custom-dropdown-item" data-value="OANDA:AUDNZD">
+              <div style="display: flex; gap: .4rem; align-items: center;">
+                <div class="img-overlay">
+                  <img src="./assets/au.svg" alt="" class="img-1" />
+                  <img src="./assets/cn.svg" alt="" class="img-2" />
+                </div>
+                <span style="font-size: 1rem; color: #fff;">AUD/NZD</span>
+                <span
+                  style="font-size: .6rem; color: #fff; padding: .5rem; background: rgb(255, 255, 255, 0.28); border-radius: .4rem;">OTC</span>
+              </div>
+              <span style="font-size: 1rem; color: #fff;">1.087879</span>
+              <span style="color: var(--secondary); font-size: 1rem;">60%</span>
+            </div>
+            <div class="custom-dropdown-item" data-value="OANDA:EURUSD">
+              <div style="display: flex; gap: .4rem; align-items: center;">
+                <div class="img-overlay">
+                  <img src="./assets/au.svg" alt="" class="img-1" />
+                  <img src="./assets/cn.svg" alt="" class="img-2" />
+                </div>
+                <span style="font-size: 1rem; color: #fff;">EUR/USD</span>
+                <span
+                  style="font-size: .6rem; color: #fff; padding: .5rem; background: rgb(255, 255, 255, 0.28); border-radius: .4rem;">OTC</span>
+              </div>
+              <span style="font-size: 1rem; color: #fff;">1.087879</span>
+              <span style="color: var(--secondary); font-size: 1rem;">95%</span>
+            </div>
+
+
+          </div>
+        </div>
+        <div class="mobile-currency-tab-content" id="mobile-currency-tab2">
+          <div class="scroll-container">
+
+            <div class="custom-dropdown-item" data-value="OANDA:BNBUSDT">
+              <div style="display: flex; gap: .4rem; align-items: center;">
+                <div class="img-overlay">
+                  <img src="./assets/bnb.svg" alt="" class="img-1" />
+                  <img src="./assets/usdt.svg" alt="" class="img-2" />
+                </div>
+                <span style="font-size: 1rem; color: #fff;">BNB/USDT</span>
+                <span
+                  style="font-size: .6rem; color: #fff; padding: .5rem; background: rgb(255, 255, 255, 0.28); border-radius: .4rem;">OTC</span>
+              </div>
+              <span style="font-size: 1rem; color: #fff;text-align: center">53.82</span>
+              <span style="color: var(--secondary); font-size: 1rem;">90%</span>
+            </div>
+
+            <div class="custom-dropdown-item" data-value="OANDA:BTCUSDT">
+              <div style="display: flex; gap: .4rem; align-items: center;">
+                <div class="img-overlay">
+                  <img src="./assets/btc.svg" alt="" class="img-1" />
+                  <img src="./assets/usdt.svg" alt="" class="img-2" />
+                </div>
+                <span style="font-size: 1rem; color: #fff;">BTC/USDT</span>
+              </div>
+              <span style="font-size: 1rem; color: #fff;text-align: center">61,101.560</span>
+              <span style="color: var(--secondary); font-size: 1rem;">60%</span>
+            </div>
+
+
+            <div class="custom-dropdown-item" data-value="OANDA:BTCUSDT">
+              <div style="display: flex; gap: .4rem; align-items: center;">
+                <div class="img-overlay">
+                  <img src="./assets/btc.svg" alt="" class="img-1" />
+                  <img src="./assets/usdt.svg" alt="" class="img-2" />
+                </div>
+                <span style="font-size: 1rem; color: #fff;">BTC/USDT</span>
+                <span
+                  style="font-size: .6rem; color: #fff; padding: .5rem; background: rgb(255, 255, 255, 0.28); border-radius: .4rem;">OTC</span>
+              </div>
+              <span style="font-size: 1rem; color: #fff;text-align: center">61,101.960</span>
+              <span style="color: var(--secondary); font-size: 1rem;">95%</span>
+            </div>
+            <div class="custom-dropdown-item" data-value="OANDA:DOGEUSDT">
+              <div style="display: flex; gap: .4rem; align-items: center;">
+                <div class="img-overlay">
+                  <img src="./assets/dash.svg" alt="" class="img-1" />
+                  <img src="./assets/usdt.svg" alt="" class="img-2" />
+                </div>
+                <span style="font-size: 1rem; color: #fff;">DOGE/USDT</span>
+                <span
+                  style="font-size: .6rem; color: #fff; padding: .5rem; background: rgb(255, 255, 255, 0.28); border-radius: .4rem;">OTC</span>
+              </div>
+              <span style="font-size: 1rem; color: #fff; text-align: center;">0.148718</span>
+              <span style="color: var(--secondary); font-size: 1rem;">75%</span>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-currency-tab-content" id="mobile-currency-tab3">
+          <div class="scroll-container">
+
+            <div class="custom-dropdown-item" data-value="OANDA:BRENT.CMDUSD">
+              <div style="display: flex; gap: .4rem; align-items: center;">
+                <div class="img-overlay">
+                  <img src="./assets/bnb.svg" alt="" class="img-1" />
+                  <img src="./assets/usdt.svg" alt="" class="img-2" />
+                </div>
+                <span style="font-size: 1rem; color: #fff;">BRENT.CMD/USD</span>
+                <span
+                  style="font-size: .6rem; color: #fff; padding: .5rem; background: rgb(255, 255, 255, 0.28); border-radius: .4rem;">OTC</span>
+              </div>
+              <span style="font-size: 1rem; color: #fff;text-align: center">87.4944</span>
+              <span style="color: var(--secondary); font-size: 1rem;">88%</span>
+            </div>
+            <div class="custom-dropdown-item" data-value="OANDA:COPPER.CMDUSD">
+              <div style="display: flex; gap: .4rem; align-items: center;">
+                <div class="img-overlay">
+                  <img src="./assets/bnb.svg" alt="" class="img-1" />
+                  <img src="./assets/usdt.svg" alt="" class="img-2" />
+                </div>
+                <span style="font-size: 1rem; color: #fff;">COPPER.CMD/USD</span>
+                <span
+                  style="font-size: .6rem; color: #fff; padding: .5rem; background: rgb(255, 255, 255, 0.28); border-radius: .4rem;">OTC</span>
+              </div>
+              <span style="font-size: 1rem; color: #fff;text-align: center">4.40528</span>
+              <span style="color: var(--secondary); font-size: 1rem;">95%</span>
+            </div>
+            <div class="custom-dropdown-item" data-value="OANDA:XAUUSD">
+              <div style="display: flex; gap: .4rem; align-items: center;">
+                <div class="img-overlay">
+                  <img src="./assets/bnb.svg" alt="" class="img-1" />
+                  <img src="./assets/usdt.svg" alt="" class="img-2" />
+                </div>
+                <span style="font-size: 1rem; color: #fff;">XAU/USD</span>
+              </div>
+              <span style="font-size: 1rem; color: #fff;text-align: center">2,378.4356</span>
+              <span style="color: var(--secondary); font-size: 1rem;">60%</span>
+            </div>
+            <div class="custom-dropdown-item" data-value="OANDA:XAUUSD">
+              <div style="display: flex; gap: .4rem; align-items: center;">
+                <div class="img-overlay">
+                  <img src="./assets/bnb.svg" alt="" class="img-1" />
+                  <img src="./assets/usdt.svg" alt="" class="img-2" />
+                </div>
+                <span style="font-size: 1rem; color: #fff;">XAU/USD</span>
+                <span
+                  style="font-size: .6rem; color: #fff; padding: .5rem; background: rgb(255, 255, 255, 0.28); border-radius: .4rem;">OTC</span>
+              </div>
+              <span style="font-size: 1rem; color: #fff;text-align: center">2,378.5417</span>
+              <span style="color: var(--secondary); font-size: 1rem;">95%</span>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-currency-tab-content" id="mobile-currency-tab4">
+          <div class="scroll-container">
+
+            <div class="custom-dropdown-item" data-value="OANDA:CHE.IDXCHF">
+              <div style="display: flex; gap: .4rem; align-items: center;">
+                <div class="img-overlay">
+                  <img src="./assets/bnb.svg" alt="" class="img-1" />
+                  <img src="./assets/usdt.svg" alt="" class="img-2" />
+                </div>
+                <span style="font-size: 1rem; color: #fff;">CHE.IDX/CHF</span>
+                <span
+                  style="font-size: .6rem; color: #fff; padding: .5rem; background: rgb(255, 255, 255, 0.28); border-radius: .4rem;">OTC</span>
+              </div>
+              <span style="font-size: 1rem; color: #fff;text-align: center">11,249.4739</span>
+              <span style="color: var(--secondary); font-size: 1rem;">95%</span>
+            </div>
+            <div class="custom-dropdown-item" data-value="OANDA:ESP.IDXEUR">
+              <div style="display: flex; gap: .4rem; align-items: center;">
+                <div class="img-overlay">
+                  <img src="./assets/bnb.svg" alt="" class="img-1" />
+                  <img src="./assets/usdt.svg" alt="" class="img-2" />
+                </div>
+                <span style="font-size: 1rem; color: #fff;">ESP.IDX/EUR</span>
+                <span
+                  style="font-size: .6rem; color: #fff; padding: .5rem; background: rgb(255, 255, 255, 0.28); border-radius: .4rem;">OTC</span>
+              </div>
+              <span style="font-size: 1rem; color: #fff;text-align: center">10,677.7250</span>
+              <span style="color: var(--secondary); font-size: 1rem;">95%</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
       <div class="second-flex">
@@ -680,7 +889,245 @@
                 </svg>
               </div>
 
-              <div class="desktop-custom-dropdown-menu" id="desktop-currency-menu">
+
+            </button>
+            <div class="desktop-custom-dropdown-menu" id="desktop-currency-menu">
+              <div style="display: flex; gap: .5rem; align-items: center;">
+                <button class="currency-option active">Option</button>
+                <button class="currency-option">Forex & CFD</button>
+              </div>
+              <div class="search-input">
+                <input type="text" placeholder="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
+
+              </div>
+              <div class="currency-tabs">
+                <div class="currency-tab active" data-tab="currency-tab1">Currencies</div>
+                <div class="currency-tab" data-tab="currency-tab2">Cryptocurrencies</div>
+                <div class="currency-tab" data-tab="currency-tab3">Commodities</div>
+                <div class="currency-tab" data-tab="currency-tab4">Indices</div>
+                <div class="currency-tab-slider"></div>
+              </div>
+              <div class="currency-tab-content active" id="currency-tab1">
+                <div class="scroll-container">
+                  <div class="desktop-custom-dropdown-item" data-value="OANDA:AUDCAD">
+                    <div style="display: flex; gap: .4rem; align-items: center;">
+                      <div class="img-overlay">
+                        <img src="./assets/au.svg" alt="" class="img-1" />
+                        <img src="./assets/cn.svg" alt="" class="img-2" />
+                      </div>
+                      <span style="font-size: 1rem; color: #fff;">AUD/CAD</span>
+                      <span
+                        style="font-size: .6rem; color: #fff; padding: .5rem; background: rgb(255, 255, 255, 0.28); border-radius: .4rem;">OTC</span>
+                    </div>
+                    <span style="font-size: 1rem; color: #fff;">0.88617</span>
+                    <span style="color: var(--secondary); font-size: 1rem;">92%</span>
+                  </div>
+
+                  <div class="desktop-custom-dropdown-item" data-value="OANDA:AUDCHF">
+                    <div style="display: flex; gap: .4rem; align-items: center;">
+                      <div class="img-overlay">
+                        <img src="./assets/au.svg" alt="" class="img-1" />
+                        <img src="./assets/cn.svg" alt="" class="img-2" />
+                      </div>
+                      <span style="font-size: 1rem; color: #fff;">AUD/CHF</span>
+                      <span
+                        style="font-size: .6rem; color: #fff; padding: .5rem; background: rgb(255, 255, 255, 0.28); border-radius: .4rem;">OTC</span>
+                    </div>
+                    <span style="font-size: 1rem; color: #fff;">0.585314</span>
+                    <span style="color: var(--secondary); font-size: 1rem;">91%</span>
+                  </div>
+
+                  <div class="desktop-custom-dropdown-item" data-value="OANDA:AUDJPY">
+                    <div style="display: flex; gap: .4rem; align-items: center;">
+                      <div class="img-overlay">
+                        <img src="./assets/au.svg" alt="" class="img-1" />
+                        <img src="./assets/cn.svg" alt="" class="img-2" />
+                      </div>
+                      <span style="font-size: 1rem; color: #fff;">AUD/JPY</span>
+                      <span
+                        style="font-size: .6rem; color: #fff; padding: .5rem; background: rgb(255, 255, 255, 0.28); border-radius: .4rem;">OTC</span>
+                    </div>
+                    <span style="font-size: 1rem; color: #fff;">99.3106</span>
+                    <span style="color: var(--secondary); font-size: 1rem;">90%</span>
+                  </div>
+                  <div class="desktop-custom-dropdown-item" data-value="OANDA:AUDNZD">
+                    <div style="display: flex; gap: .4rem; align-items: center;">
+                      <div class="img-overlay">
+                        <img src="./assets/au.svg" alt="" class="img-1" />
+                        <img src="./assets/cn.svg" alt="" class="img-2" />
+                      </div>
+                      <span style="font-size: 1rem; color: #fff;">AUD/NZD</span>
+                      <span
+                        style="font-size: .6rem; color: #fff; padding: .5rem; background: rgb(255, 255, 255, 0.28); border-radius: .4rem;">OTC</span>
+                    </div>
+                    <span style="font-size: 1rem; color: #fff;">1.087879</span>
+                    <span style="color: var(--secondary); font-size: 1rem;">60%</span>
+                  </div>
+                  <div class="desktop-custom-dropdown-item" data-value="OANDA:EURUSD">
+                    <div style="display: flex; gap: .4rem; align-items: center;">
+                      <div class="img-overlay">
+                        <img src="./assets/au.svg" alt="" class="img-1" />
+                        <img src="./assets/cn.svg" alt="" class="img-2" />
+                      </div>
+                      <span style="font-size: 1rem; color: #fff;">EUR/USD</span>
+                      <span
+                        style="font-size: .6rem; color: #fff; padding: .5rem; background: rgb(255, 255, 255, 0.28); border-radius: .4rem;">OTC</span>
+                    </div>
+                    <span style="font-size: 1rem; color: #fff;">1.087879</span>
+                    <span style="color: var(--secondary); font-size: 1rem;">95%</span>
+                  </div>
+
+
+                </div>
+              </div>
+              <div class="currency-tab-content" id="currency-tab2">
+                <div class="scroll-container">
+
+                  <div class="desktop-custom-dropdown-item" data-value="OANDA:BNBUSDT">
+                    <div style="display: flex; gap: .4rem; align-items: center;">
+                      <div class="img-overlay">
+                        <img src="./assets/bnb.svg" alt="" class="img-1" />
+                        <img src="./assets/usdt.svg" alt="" class="img-2" />
+                      </div>
+                      <span style="font-size: 1rem; color: #fff;">BNB/USDT</span>
+                      <span
+                        style="font-size: .6rem; color: #fff; padding: .5rem; background: rgb(255, 255, 255, 0.28); border-radius: .4rem;">OTC</span>
+                    </div>
+                    <span style="font-size: 1rem; color: #fff;text-align: center">53.82</span>
+                    <span style="color: var(--secondary); font-size: 1rem;">90%</span>
+                  </div>
+                  <div class="desktop-custom-dropdown-item" data-value="OANDA:BTCUSDT">
+                    <div style="display: flex; gap: .4rem; align-items: center;">
+                      <div class="img-overlay">
+                        <img src="./assets/btc.svg" alt="" class="img-1" />
+                        <img src="./assets/usdt.svg" alt="" class="img-2" />
+                      </div>
+                      <span style="font-size: 1rem; color: #fff;">BTC/USDT</span>
+                    </div>
+                    <span style="font-size: 1rem; color: #fff;text-align: center">61,101.560</span>
+                    <span style="color: var(--secondary); font-size: 1rem;">60%</span>
+                  </div>
+                  <div class="desktop-custom-dropdown-item" data-value="OANDA:BTCUSDT">
+                    <div style="display: flex; gap: .4rem; align-items: center;">
+                      <div class="img-overlay">
+                        <img src="./assets/btc.svg" alt="" class="img-1" />
+                        <img src="./assets/usdt.svg" alt="" class="img-2" />
+                      </div>
+                      <span style="font-size: 1rem; color: #fff;">BTC/USDT</span>
+                      <span
+                        style="font-size: .6rem; color: #fff; padding: .5rem; background: rgb(255, 255, 255, 0.28); border-radius: .4rem;">OTC</span>
+                    </div>
+                    <span style="font-size: 1rem; color: #fff;text-align: center">61,101.960</span>
+                    <span style="color: var(--secondary); font-size: 1rem;">95%</span>
+                  </div>
+                  <div class="desktop-custom-dropdown-item" data-value="OANDA:DOGEUSDT">
+                    <div style="display: flex; gap: .4rem; align-items: center;">
+                      <div class="img-overlay">
+                        <img src="./assets/dash.svg" alt="" class="img-1" />
+                        <img src="./assets/usdt.svg" alt="" class="img-2" />
+                      </div>
+                      <span style="font-size: 1rem; color: #fff;">DOGE/USDT</span>
+                      <span
+                        style="font-size: .6rem; color: #fff; padding: .5rem; background: rgb(255, 255, 255, 0.28); border-radius: .4rem;">OTC</span>
+                    </div>
+                    <span style="font-size: 1rem; color: #fff; text-align: center;">0.148718</span>
+                    <span style="color: var(--secondary); font-size: 1rem;">75%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="currency-tab-content" id="currency-tab3">
+                <div class="scroll-container">
+
+                  <div class="desktop-custom-dropdown-item" data-value="OANDA:BRENT.CMDUSD">
+                    <div style="display: flex; gap: .4rem; align-items: center;">
+                      <div class="img-overlay">
+                        <img src="./assets/bnb.svg" alt="" class="img-1" />
+                        <img src="./assets/usdt.svg" alt="" class="img-2" />
+                      </div>
+                      <span style="font-size: 1rem; color: #fff;">BRENT.CMD/USD</span>
+                      <span
+                        style="font-size: .6rem; color: #fff; padding: .5rem; background: rgb(255, 255, 255, 0.28); border-radius: .4rem;">OTC</span>
+                    </div>
+                    <span style="font-size: 1rem; color: #fff;text-align: center">87.4944</span>
+                    <span style="color: var(--secondary); font-size: 1rem;">88%</span>
+                  </div>
+                  <div class="desktop-custom-dropdown-item" data-value="OANDA:COPPER.CMDUSD">
+                    <div style="display: flex; gap: .4rem; align-items: center;">
+                      <div class="img-overlay">
+                        <img src="./assets/bnb.svg" alt="" class="img-1" />
+                        <img src="./assets/usdt.svg" alt="" class="img-2" />
+                      </div>
+                      <span style="font-size: 1rem; color: #fff;">COPPER.CMD/USD</span>
+                      <span
+                        style="font-size: .6rem; color: #fff; padding: .5rem; background: rgb(255, 255, 255, 0.28); border-radius: .4rem;">OTC</span>
+                    </div>
+                    <span style="font-size: 1rem; color: #fff;text-align: center">4.40528</span>
+                    <span style="color: var(--secondary); font-size: 1rem;">95%</span>
+                  </div>
+                  <div class="desktop-custom-dropdown-item" data-value="OANDA:XAUUSD">
+                    <div style="display: flex; gap: .4rem; align-items: center;">
+                      <div class="img-overlay">
+                        <img src="./assets/bnb.svg" alt="" class="img-1" />
+                        <img src="./assets/usdt.svg" alt="" class="img-2" />
+                      </div>
+                      <span style="font-size: 1rem; color: #fff;">XAU/USD</span>
+                    </div>
+                    <span style="font-size: 1rem; color: #fff;text-align: center">2,378.4356</span>
+                    <span style="color: var(--secondary); font-size: 1rem;">60%</span>
+                  </div>
+                  <div class="desktop-custom-dropdown-item" data-value="OANDA:XAUUSD">
+                    <div style="display: flex; gap: .4rem; align-items: center;">
+                      <div class="img-overlay">
+                        <img src="./assets/bnb.svg" alt="" class="img-1" />
+                        <img src="./assets/usdt.svg" alt="" class="img-2" />
+                      </div>
+                      <span style="font-size: 1rem; color: #fff;">XAU/USD</span>
+                      <span
+                        style="font-size: .6rem; color: #fff; padding: .5rem; background: rgb(255, 255, 255, 0.28); border-radius: .4rem;">OTC</span>
+                    </div>
+                    <span style="font-size: 1rem; color: #fff;text-align: center">2,378.5417</span>
+                    <span style="color: var(--secondary); font-size: 1rem;">95%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="currency-tab-content" id="currency-tab4">
+                <div class="scroll-container">
+
+                  <div class="desktop-custom-dropdown-item" data-value="OANDA:CHE.IDXCHF">
+                    <div style="display: flex; gap: .4rem; align-items: center;">
+                      <div class="img-overlay">
+                        <img src="./assets/bnb.svg" alt="" class="img-1" />
+                        <img src="./assets/usdt.svg" alt="" class="img-2" />
+                      </div>
+                      <span style="font-size: 1rem; color: #fff;">CHE.IDX/CHF</span>
+                      <span
+                        style="font-size: .6rem; color: #fff; padding: .5rem; background: rgb(255, 255, 255, 0.28); border-radius: .4rem;">OTC</span>
+                    </div>
+                    <span style="font-size: 1rem; color: #fff;text-align: center">11,249.4739</span>
+                    <span style="color: var(--secondary); font-size: 1rem;">95%</span>
+                  </div>
+                  <div class="desktop-custom-dropdown-item" data-value="OANDA:ESP.IDXEUR">
+                    <div style="display: flex; gap: .4rem; align-items: center;">
+                      <div class="img-overlay">
+                        <img src="./assets/bnb.svg" alt="" class="img-1" />
+                        <img src="./assets/usdt.svg" alt="" class="img-2" />
+                      </div>
+                      <span style="font-size: 1rem; color: #fff;">ESP.IDX/EUR</span>
+                      <span
+                        style="font-size: .6rem; color: #fff; padding: .5rem; background: rgb(255, 255, 255, 0.28); border-radius: .4rem;">OTC</span>
+                    </div>
+                    <span style="font-size: 1rem; color: #fff;text-align: center">10,677.7250</span>
+                    <span style="color: var(--secondary); font-size: 1rem;">95%</span>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="scroll-container">
+
                 <div class="desktop-custom-dropdown-item" data-value="OANDA:EURUSD">EUR/USD</div>
                 <div class="desktop-custom-dropdown-item" data-value="OANDA:GBPUSD">GBP/USD</div>
                 <div class="desktop-custom-dropdown-item" data-value="OANDA:USDJPY">USD/JPY</div>
@@ -694,8 +1141,8 @@
                 <div class="desktop-custom-dropdown-item" data-value="OANDA:MATICUSDT">MATIC/USDT</div>
                 <div class="desktop-custom-dropdown-item" data-value="OANDA:ETHUSDT">ETH/USDT</div>
                 <div class="desktop-custom-dropdown-item" data-value="OANDA:QNTUSDT">QNT/USDT</div>
-              </div>
-            </button>
+              </div> -->
+            </div>
             <div class="relative">
               <button class="tradeback" id="account-dropdown">
                 <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 19 19">
@@ -1118,43 +1565,332 @@
 
         <div class="modal" id="modal2">
           <span class="close-modal">&times;</span>
-          <div class="dollar-gold-bg"></div>
-          <ul class="feature-list">
-            <li class="feature-list-item">
-              <svg class="svg-icon" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="m8.424 15.666 6.329-6.33M8.84 2.824h5.807c4.838 0 6.774 1.935 6.774 6.774v5.806c0 4.839-1.936 6.774-6.774 6.774H8.84c-4.839 0-6.774-1.935-6.774-6.774V9.597c0-4.839 1.935-6.774 6.774-6.774Z"
-                  stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M8.822 10.922a1.19 1.19 0 1 0 0-2.38 1.19 1.19 0 0 0 0 2.38Zm6.326 5.537a1.19 1.19 0 1 0 .062-2.38 1.19 1.19 0 0 0-.062 2.38Z"
-                  stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-              <span class="item-description">Up to 128% APY</span>
-            </li>
-            <li class="feature-list-item">
-              <svg class="svg-icon" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M10.497 18.48a7.99 7.99 0 1 0 0-15.98 7.99 7.99 0 0 0 0 15.98ZM13.486 20.38c.9 1.27 2.37 2.1 4.05 2.1 2.73 0 4.95-2.22 4.95-4.95 0-1.66-.82-3.13-2.07-4.03"
-                  stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-              <span class="item-description">Daily Payout</span>
-            </li>
-            <li class="feature-list-item">
-              <svg class="svg-icon" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M18.809 14.05c-.42.41-.66 1-.6 1.63.09 1.08 1.08 1.87 2.16 1.87h1.9v1.19c0 2.07-1.69 3.76-3.76 3.76H7.029c-2.07 0-3.76-1.69-3.76-3.76v-6.73c0-2.07 1.69-3.76 3.76-3.76h11.48c2.07 0 3.76 1.69 3.76 3.76v1.44h-2.02c-.56 0-1.07.22-1.44.6Z"
-                  stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M3.269 12.911v-4.57c0-1.19.73-2.25 1.84-2.67l7.94-3a1.9 1.9 0 0 1 2.57 1.78v3.8M7.769 12.5h7m8.556 1.968v2.06c0 .55-.44 1-1 1.02h-1.96c-1.08 0-2.07-.79-2.16-1.87-.06-.63.18-1.22.6-1.63.37-.38.88-.6 1.44-.6h2.08c.56.02 1 .47 1 1.02Z"
-                  stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-              <span class="item-description">Instant Withdrawals</span>
-            </li>
-          </ul>
-          <div class="description-text">
-            Unlock Your Earnings Potential: Start Saving Smart!
+          <div class="carousel-container">
+            <div class="carousel carousel--1">
+              <div class="dollar-gold-bg"></div>
+
+              <ul class="feature-list">
+                <li class="feature-list-item">
+                  <svg class="svg-icon" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="m8.424 15.666 6.329-6.33M8.84 2.824h5.807c4.838 0 6.774 1.935 6.774 6.774v5.806c0 4.839-1.936 6.774-6.774 6.774H8.84c-4.839 0-6.774-1.935-6.774-6.774V9.597c0-4.839 1.935-6.774 6.774-6.774Z"
+                      stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                      d="M8.822 10.922a1.19 1.19 0 1 0 0-2.38 1.19 1.19 0 0 0 0 2.38Zm6.326 5.537a1.19 1.19 0 1 0 .062-2.38 1.19 1.19 0 0 0-.062 2.38Z"
+                      stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                  <span class="item-description">Up to 128% APY</span>
+                </li>
+                <li class="feature-list-item">
+                  <svg class="svg-icon" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10.497 18.48a7.99 7.99 0 1 0 0-15.98 7.99 7.99 0 0 0 0 15.98ZM13.486 20.38c.9 1.27 2.37 2.1 4.05 2.1 2.73 0 4.95-2.22 4.95-4.95 0-1.66-.82-3.13-2.07-4.03"
+                      stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                  <span class="item-description">Daily Payout</span>
+                </li>
+                <li class="feature-list-item">
+                  <svg class="svg-icon" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M18.809 14.05c-.42.41-.66 1-.6 1.63.09 1.08 1.08 1.87 2.16 1.87h1.9v1.19c0 2.07-1.69 3.76-3.76 3.76H7.029c-2.07 0-3.76-1.69-3.76-3.76v-6.73c0-2.07 1.69-3.76 3.76-3.76h11.48c2.07 0 3.76 1.69 3.76 3.76v1.44h-2.02c-.56 0-1.07.22-1.44.6Z"
+                      stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                      d="M3.269 12.911v-4.57c0-1.19.73-2.25 1.84-2.67l7.94-3a1.9 1.9 0 0 1 2.57 1.78v3.8M7.769 12.5h7m8.556 1.968v2.06c0 .55-.44 1-1 1.02h-1.96c-1.08 0-2.07-.79-2.16-1.87-.06-.63.18-1.22.6-1.63.37-.38.88-.6 1.44-.6h2.08c.56.02 1 .47 1 1.02Z"
+                      stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                  <span class="item-description">Instant Withdrawals</span>
+                </li>
+              </ul>
+              <div class="description-text">
+                Unlock Your Earnings Potential: Start Saving Smart!
+              </div>
+              <div style="display: flex; justify-content: center; gap: 1rem;">
+                <button class="carousel-btn carousel__btn--right">Next</button>
+              </div>
+
+            </div>
+            <div class="carousel carousel--2">
+              <div class="dollar-gold-bg-2">
+                <div
+                  style="padding: 1rem; border-radius: .5rem; background:rgb(41, 61, 86); width: 20rem; display: flex;gap: .4rem; flex-direction: column;">
+                  <span style="font-size: 1rem; color: var(--font-color);">Net Balance</span>
+                  <span
+                    style="padding: .8rem; align-self: center; text-align: center; width: 100%;font-size: 1.1rem; border-radius: .5rem; background: rgba(81, 207, 239, 0.45);color: #fff; ">1,000
+                    USD</span>
+                </div>
+                <span
+                  style="height: 1.5rem; width: 1.5rem; background: rgb(41, 61, 86); border-radius: 50%; display: flex;justify-content: center; align-items: center; color: gold; font-size: 1.1rem; font-weight: 200;">x</span>
+                <div
+                  style="padding: 1rem; border-radius: .5rem; background:rgb(41, 61, 86); width: 20rem; display: flex;gap: .4rem; flex-direction: column;">
+                  <span style="font-size: 1rem; color: var(--font-color);">Your APY</span>
+                  <span
+                    style="padding: .8rem; align-self: center; text-align: center; width: 100%;font-size: 1.1rem; border-radius: .5rem; background: rgba(81, 207, 239, 0.45);color: #fff; ">128%</span>
+                </div>
+                <span
+                  style="height: 1.5rem; width: 1.5rem; background: rgb(41, 61, 86); border-radius: 50%; display: flex;justify-content: center; align-items: center; color: gold; font-size: 1.1rem; font-weight: 200;">=</span>
+                <div
+                  style="padding: 1rem; border-radius: .5rem; background:rgb(41, 61, 86); width: 20rem; display: flex;gap: .4rem; flex-direction: column;">
+                  <span style="font-size: 1rem; color: var(--font-color);">Daily Payouts</span>
+                  <span
+                    style="padding: .8rem; align-self: center; text-align: center; width: 100%;font-size: 1.1rem; border-radius: .5rem; background: #4b5563;color: var(--green); ">22.00USD</span>
+                </div>
+              </div>
+
+
+              <div class="description-text">
+                Daily Payouts are Based on your investment and turnover amounts.
+              </div>
+              <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 3rem;">
+
+                <button class="carousel-btn carousel__btn--left">Back</button>
+                <button class="carousel-btn carousel__btn--right">Next</button>
+              </div>
+            </div>
+            <div class="carousel carousel--1">
+              <div class="dollar-lock-bg"></div>
+
+
+              <div class="description-text">
+                TurboSavings safeguards balances and potential profits of our clients.
+              </div>
+              <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 3rem;">
+                <button class="carousel-btn carousel__btn--left">Back</button>
+
+                <button class="carousel-btn" onclick="openTurboModal()">Start Saving</button>
+              </div>
+
+            </div>
+
+
+            <div class="dots"></div>
+
+          </div>
+
+
+          <div class="turbosaving-content">
+            <span class="close-turbo-modal" onclick="closeTurboModal()">&times;</span>
+
+            <div class="trading-stats">
+              <div class="flex-col">
+                <h5 class="trading__stats-title">TurboSavings</h5>
+                <p class="trading__stats-text">
+                  Passive income available for everyone!
+                  Choose your savings type and earn money smart!
+                </p>
+              </div>
+              <div class="copy-trading-bg"></div>
+            </div>
+            <div class="turbo-content-container">
+
+              <div class="turbo-content">
+                <div style="background: rgb(81, 207, 239,.15); border-radius: .5rem; padding: 1rem;">
+                  <span style="font-size: 1rem; color: #fff;">Yield Calculator</span>
+                  <div style="display: flex; flex-direction: column; gap: .5rem; margin-top: 1rem;">
+                    <span style="font-size: 1rem; color: var(--font-color);">Current Net Balance</span>
+                    <div
+                      style="text-align: center; background: rgb(23, 39, 59,.3); padding: 1rem; border-radius: .5rem; color: #fff; font-size: 1.1rem; font-weight: 500;">
+                      $ 0.00</div>
+                  </div>
+                  <div style="display: flex; gap: .7rem;">
+                    <div style="display: flex; flex-direction: column; gap: .5rem; margin-top: 1rem;">
+                      <span style="font-size: 1rem; color: var(--font-color);">Savings Type</span>
+                      <div style="display: flex;">
+                        <button class="saving-btn saving-btn-1 active">Flexible</button>
+                        <button class="saving-btn saving-btn-2">Locked</button>
+                      </div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: .5rem; margin-top: 1rem; width: 100%;">
+                      <span style="font-size: 1rem; color: var(--font-color);">Period</span>
+                      <select name="period" id="period" class="period-select">
+                        <option value="7">7 days</option>
+                        <option value="30">30 days</option>
+                        <option value="365">365 days</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div style="display: flex; gap: .7rem; padding: 1rem;">
+                  <div style="display: flex; flex-direction: column; gap: .5rem; margin-top: 1rem; width: 100%;">
+                    <span style="font-size: 1rem; color: var(--font-color);">Last 30d Turnover </span>
+                    <div
+                      style="text-align: center;width: 100%; background: rgb(23, 39, 59); padding: 1rem; border-radius: .5rem; color: #fff; font-size: 1.1rem; font-weight: 500;">
+                      $ 0.00 <span
+                        style="padding: .4rem; border-radius: .5rem;background: rgb(81, 207, 239,.5);">0x</span></div>
+
+                  </div>
+                  <div style="display: flex; flex-direction: column; gap: .5rem; margin-top: 1rem; width: 100%;">
+                    <span style="font-size: 1rem; color: var(--font-color);">Deposit </span>
+                    <div
+                      style="text-align: center;width: 100%; background: rgb(23, 39, 59); padding: 1rem; border-radius: .5rem; color: #fff; font-size: 1.1rem; font-weight: 500;">
+                      $ 0.00</div>
+
+                  </div>
+                </div>
+                <div style="padding: 0rem 1rem; margin-bottom: 1rem;">
+
+                  <div
+                    style="text-align: center;width: 100%;  align-items: center; background: rgb(23, 39, 59);display: flex; justify-content: center; gap: .6rem; padding: 1rem; border-radius: .5rem; color: #fff; font-size: 1.1rem; font-weight: 500;">
+                    <span style="color: var(--font-color); font-size: 1rem;">Potential APY: <span
+                        style="color: var(--main);">8%</span></span>
+                    <span style="height: 1rem; width: 1px; background: var(--font-color);"></span>
+                    <span style="color: var(--font-color); font-size: 1rem;">365d payment: <span
+                        style="color: var(--green);">$0.00</span></span>
+
+                  </div>
+                </div>
+                <div style="padding:.3rem 1rem; margin-bottom: 1rem;">
+
+                  <button class="start-save">Start Saving</button>
+                </div>
+
+              </div>
+
+              <span style="font-size: 1rem; color: var(--font-color);">Saving Rules</span>
+               <div class="saving-rules-grid">
+                <div class="side-box" style="border-top-left-radius: .5rem;">
+                  Last 30d Turnover
+                </div>
+                <div class="center-box">
+                  0x
+                </div>
+                <div class="center-box">
+                  1x
+                </div>
+                <div class="center-box">
+                  5x
+                </div>
+                <div class="center-box">
+                  10x
+                </div>
+                <div class="center-box" style="border-top-right-radius: .5rem;">
+                  50x
+                </div>
+                <div class="side-box">
+                  Flexible
+                </div>
+                <div class="center-box">
+                  1%
+                </div>
+                <div class="center-box">
+                  2%
+                </div>
+                <div class="center-box">
+                  4%
+                </div>
+                <div class="center-box">
+                  8%
+                </div>
+                <div class="center-box">
+                  16%
+                </div>
+                <div class="side-box">
+                  Locked 7D
+                </div>
+                <div class="center-box">
+                  2%
+                </div>
+                <div class="center-box">
+                  4%
+                </div>
+                <div class="center-box">
+                  8%
+                </div>
+                <div class="center-box">
+                  16%
+                </div>
+                <div class="center-box">
+                  32%
+                </div>
+                <div class="side-box">
+                  Locked 30D
+                </div>
+                <div class="center-box">
+                  4%
+                </div>
+                <div class="center-box">
+                  8%
+                </div>
+                <div class="center-box">
+                  16%
+                </div>
+                <div class="center-box">
+                  32%
+                </div>
+                <div class="center-box">
+                  64%
+                </div>
+                <div class="side-box" style="border-bottom-left-radius: .5rem;">
+                  Locked 356D
+                </div>
+                <div class="center-box">
+                  8%
+                </div>
+                <div class="center-box">
+                  16%
+                </div>
+                <div class="center-box">
+                  32%
+                </div>
+                <div class="center-box">
+                  64%
+                </div>
+                <div class="center-box" style="border-bottom-right-radius: .5rem;">
+                  128%
+                </div>
+              </div>
+
+              <div class="accordion-body">
+                <div class="accordion">
+
+                  <div class="container">
+                    <div class="label">What is TurboSavings?</div>
+                    <div class="content">TurboSavings is a straightforward way to make passive income.
+                      Invest your Net balance and earn daily yield based on your available APY percentage and options
+                      trading turnover for the past 30d.</div>
+                  </div>
+
+                  <div class="container">
+                    <div class="label">Can i withdraw instantly?</div>
+                    <div class="content">Withdrawals of the TurboSavings feature function similarly to regular
+                      withdrawals: you submit a request for a specific amount, and our finance team promptly handles it.
+                      Additionally, while TurboSavings is active, Net balance remains locked for your convenience and
+                      security.
+                    </div>
+                  </div>
+
+                  <div class="container">
+                    <div class="label">How are the payout being calculated?</div>
+                    <div class="content">Once TurboSavings is enabled, your Net balance becomes an investment that earns
+                      daily returns based on the APY percentage that can be set to Flexible or Locked, but you cannot
+                      withdraw the funds while the feature is active.
+                      An example:
+                      Your Net $1000 x APY 128% = $1280, this is your Annual income.
+                      Annual profit $1280 / 365 days = $3.50 of passive Daily income.</div>
+                  </div>
+
+                  <div class="container">
+                    <div class="label">What is APY?</div>
+                    <div class="content">APY stands for Annual Percentage Yield. It's a way to measure how much money
+                      you can earn on a deposit or investment over the course of a year. APY helps you understand how
+                      much money you can make on your savings or investments over time.
+
+                      It's important to consider APY when comparing different options to find the best way to grow your
+                      money. </div>
+                  </div>
+
+
+
+
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
+
+
+
+
         <div class="modal" id="modal3">
           <span class="close-modal">&times;</span>
           <div class="trading-stats">
@@ -1589,6 +2325,75 @@
             </div>
             <div class="market-analysis-bg"></div>
           </div>
+
+          <div class="market-analysis-tabs">
+            <div class="market-analysis-tab active" data-tab="market-analysis-tab1">Technical analysis</div>
+            <div class="market-analysis-tab" data-tab="market-analysis-tab2">Economic Calender</div>
+            <div class="market-analysis-tab" data-tab="market-analysis-tab3">Market news</div>
+            <div class="market-analysis-tab-slider"></div>
+          </div>
+          <div class="market-analysis-tab-content active" id="market-analysis-tab1" style="height: 40rem">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+              <div class="tradingview-widget-container__widget"></div>
+              <script type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+                  {
+                    "interval": "1m",
+                      "width": "100%",
+                        "isTransparent": true,
+                          "height": "100%",
+                            "symbol": "OANDA:EURUSD",
+                              "showIntervalTabs": true,
+                                "displayMode": "single",
+                                  "locale": "en",
+                                    "colorTheme": "dark"
+                  }
+                </script>
+            </div>
+            <!-- TradingView Widget END -->
+          </div>
+          <div class="market-analysis-tab-content " id="market-analysis-tab2" style="height: 40rem">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+              <div class="tradingview-widget-container__widget"></div>
+              <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js"
+                async>
+                  {
+                    "width": "100%",
+                      "height": "100%",
+                        "colorTheme": "dark",
+                          "isTransparent": true,
+                            "locale": "en",
+                              "importanceFilter": "-1,0,1",
+                                "countryFilter": "ar,au,br,ca,cn,fr,de,in,id,it,jp,kr,mx,ru,sa,za,tr,gb,us,eu"
+                  }
+                </script>
+            </div>
+            <!-- TradingView Widget END -->
+          </div>
+          <div class="market-analysis-tab-content" id="market-analysis-tab3" style="height: 40rem">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+              <div class="tradingview-widget-container__widget"></div>
+              <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow"
+                  target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+              <script type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+                  {
+                    "feedMode": "all_symbols",
+                      "isTransparent": true,
+                        "displayMode": "regular",
+                          "width": "100%",
+                            "height": "100%",
+                              "colorTheme": "dark",
+                                "locale": "en"
+                  }
+                </script>
+            </div>
+            <!-- TradingView Widget END -->
+          </div>
+
         </div>
         <div class="modal" id="modal7">
           <span class="close-modal">&times;</span>
@@ -1605,6 +2410,7 @@
             </div>
             <div class="help-center-bg"></div>
           </div>
+         
           <div style="
                 display: flex;
                 justify-content: space-between;
@@ -1617,6 +2423,25 @@
                 stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
           </div>
+           <div class="help-tabs">
+         <div class="help-tab active" data-tab="help-tab1">General Info</div>
+         <div class="help-tab" data-tab="help-tab2">My account</div>
+         <div class="help-tab" data-tab="help-tab3">Finance</div>
+         <div class="help-tab" data-tab="help-tab4">Trading platform</div>
+         <div class="help-tab" data-tab="help-tab5">Option trading</div>
+         <div class="help-tab" data-tab="help-tab6">CFD trading</div>
+         <div class="help-tab" data-tab="help-tab7">Copy trading</div>
+         <div class="help-tab" data-tab="help-tab8">Turbo Savings</div>
+         <div class="help-tab-slider"></div>
+       </div>
+       <div class="help-tab-content active" id="help-tab1">1</div>
+       <div class="help-tab-content" id="help-tab2">2</div>
+       <div class="help-tab-content" id="help-tab3">3</div>
+       <div class="help-tab-content" id="help-tab4">4</div>
+       <div class="help-tab-content" id="help-tab5">5</div>
+       <div class="help-tab-content" id="help-tab6">6</div>
+       <div class="help-tab-content" id="help-tab7">7</div>
+       <div class="help-tab-content" id="help-tab8">8</div>
         </div>
         <div class="modal" id="modal8">
           <span class="close-modal">&times;</span>
@@ -2938,7 +3763,7 @@
             <h3 class="add__fund--header fund-account-indicator">Method 1 / 4</h3>
           </div>
           <div class="add__fund--method show fund-modal-content" id="step1">
-            <button class="add__fund--buttons">
+            <button class="add__fund--buttons" data-target="bank-card">
               <svg class="svg-icon" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2 9.003h20M6 17.005h2M10.5 17.005h4" stroke="currentColor" stroke-width="1.2"
                   stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -2946,7 +3771,9 @@
                   d="M6.44 4.006h11.11c3.56 0 4.45.88 4.45 4.39v8.21c0 3.51-.89 4.39-4.44 4.39H6.44c-3.55.01-4.44-.87-4.44-4.38v-8.22c0-3.51.89-4.39 4.44-4.39Z"
                   stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
               </svg>
-              <span>Bank Cards</span></button><button class="add__fund--buttons">
+              <span>Bank Cards</span>
+            </button>
+            <button class="add__fund--buttons" data-target="electronic-payment">
               <svg class="svg-icon" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2 9.003h20M6 17.005h2M10.5 17.005h4" stroke="currentColor" stroke-width="1.2"
                   stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -2954,7 +3781,9 @@
                   d="M6.44 4.006h11.11c3.56 0 4.45.88 4.45 4.39v8.21c0 3.51-.89 4.39-4.44 4.39H6.44c-3.55.01-4.44-.87-4.44-4.38v-8.22c0-3.51.89-4.39 4.44-4.39Z"
                   stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
               </svg>
-              <span>Electronic payments</span></button><button class="add__fund--buttons">
+              <span>Electronic payments</span>
+            </button>
+            <button class="add__fund--buttons active" data-target="crypto">
               <svg class="svg-icon" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2 9.003h20M6 17.005h2M10.5 17.005h4" stroke="currentColor" stroke-width="1.2"
                   stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -3371,7 +4200,248 @@
             <path d="m4.885 4.5 16 16m0-16-16 16" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
             </path>
           </svg>
-          mobile modal 4
+          <span style="font-size: 1rem; color: #fff;">Support <span
+              style="color: var(--font-color);">(Tickets)</span></span>
+
+          <div class="support-tabs">
+            <div class="support-tab active" data-tab="support-tab1">All</div>
+            <div class="support-tab" data-tab="support-tab2">Open</div>
+            <div class="support-tab" data-tab="support-tab3">In progress</div>
+            <div class="support-tab" data-tab="support-tab4">Closed</div>
+            <div class="support-tab-slider"></div>
+          </div>
+          <div class="support-tab-content active" id="support-tab1">
+            <div class="ticket">
+              <div class="ticket-id">
+                <span style="font-size: 1.2rem; color: var(--font-color);">ID: <span
+                    style="color: var(--secondary);">LGF-854-2340</span></span>
+              </div>
+              <div class="ticket-content">
+                <div style="display: flex;flex-direction: column;gap: .3rem">
+                  <span style="font-size: 1rem; color: rgb(255, 255, 255, 0.58);">Last update</span>
+                  <span style="font-size: 1rem; color: #fff;">12.04.2024</span>
+                </div>
+                <div style="display: flex;flex-direction: column;gap: .3rem;">
+                  <span style="font-size: 1rem; color: rgb(255, 255, 255, 0.58);">Subject</span>
+                  <span style="font-size: 1rem; color: #fff;">account funding</span>
+                </div>
+                <div style="display: flex;flex-direction: column;gap: .3rem;">
+
+                </div>
+                <div style="display: flex;flex-direction: column; gap: .3rem;">
+                  <span style="font-size:1rem; color: rgb(255, 255, 255, 0.58);">Status</span>
+                  <span style="font-size:1rem; color: var(--green);">Closed</span>
+                </div>
+              </div>
+            </div>
+            <div class="ticket">
+              <div class="ticket-id">
+                <span style="font-size: 1.2rem; color: var(--font-color);">ID: <span
+                    style="color: var(--secondary);">LMK-632-09234</span></span>
+              </div>
+              <div class="ticket-content">
+                <div style="display: flex;flex-direction: column;gap: .3rem">
+                  <span style="font-size: 1rem; color: rgb(255, 255, 255, 0.58);">Last update</span>
+                  <span style="font-size: 1rem; color: #fff;">12.04.2024</span>
+                </div>
+                <div style="display: flex;flex-direction: column;gap: .3rem;">
+                  <span style="font-size: 1rem; color: rgb(255, 255, 255, 0.58);">Subject</span>
+                  <span style="font-size: 1rem; color: #fff;">account funding</span>
+                </div>
+                <div style="display: flex;flex-direction: column;gap: .3rem;">
+
+                </div>
+                <div style="display: flex;flex-direction: column; gap: .3rem;">
+                  <span style="font-size:1rem; color: rgb(255, 255, 255, 0.58);">Status</span>
+                  <span style="font-size:1rem; color: var(--green);">Closed</span>
+                </div>
+              </div>
+            </div>
+            <div class="ticket">
+              <div class="ticket-id">
+                <span style="font-size: 1.2rem; color: var(--font-color);">ID: <span
+                    style="color: var(--secondary);">VCO-933-6309</span></span>
+              </div>
+              <div class="ticket-content">
+                <div style="display: flex;flex-direction: column;gap: .3rem">
+                  <span style="font-size: 1rem; color: rgb(255, 255, 255, 0.58);">Last update</span>
+                  <span style="font-size: 1rem; color: #fff;">12.04.2024</span>
+                </div>
+                <div style="display: flex;flex-direction: column;gap: .3rem;">
+                  <span style="font-size: 1rem; color: rgb(255, 255, 255, 0.58);">Subject</span>
+                  <span style="font-size: 1rem; color: #fff;">account funding</span>
+                </div>
+                <div style="display: flex;flex-direction: column;gap: .3rem;">
+
+                </div>
+                <div style="display: flex;flex-direction: column; gap: .3rem;">
+                  <span style="font-size:1rem; color: rgb(255, 255, 255, 0.58);">Status</span>
+                  <span style="font-size:1rem; color: var(--green);">Closed</span>
+                </div>
+              </div>
+            </div>
+            <div class="ticket">
+              <div class="ticket-id">
+                <span style="font-size: 1.2rem; color: var(--font-color);">ID: <span
+                    style="color: var(--secondary);">TKO-256-61514</span></span>
+              </div>
+              <div class="ticket-content">
+                <div style="display: flex;flex-direction: column;gap: .3rem">
+                  <span style="font-size: 1rem; color: rgb(255, 255, 255, 0.58);">Last update</span>
+                  <span style="font-size: 1rem; color: #fff;">12.04.2024</span>
+                </div>
+                <div style="display: flex;flex-direction: column;gap: .3rem;">
+                  <span style="font-size: 1rem; color: rgb(255, 255, 255, 0.58);">Subject</span>
+                  <span style="font-size: 1rem; color: #fff;">account funding</span>
+                </div>
+                <div style="display: flex;flex-direction: column;gap: .3rem;">
+
+                </div>
+                <div style="display: flex;flex-direction: column; gap: .3rem;">
+                  <span style="font-size:1rem; color: rgb(255, 255, 255, 0.58);">Status</span>
+                  <span style="font-size:1rem; color: var(--green);">Closed</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="support-tab-content" id="support-tab2">
+            <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+
+              <svg class="svg-icon" viewBox="0 0 25 25" style="height: 4rem; width:4rem; color:var(--font-color)"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.132 6.06h10" stroke="currentColor" stroke-width="1.2" stroke-miterlimit="10"
+                  stroke-linecap="round" stroke-linejoin="round"></path>
+                <path
+                  d="M14.352 2.5h5.56c1.78 0 2.22.44 2.22 2.2v4.11c0 1.76-.44 2.2-2.22 2.2h-5.56c-1.78 0-2.22-.44-2.22-2.2V4.7c0-1.76.44-2.2 2.22-2.2Z"
+                  stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M2.132 17.56h10" stroke="currentColor" stroke-width="1.2" stroke-miterlimit="10"
+                  stroke-linecap="round" stroke-linejoin="round"></path>
+                <path
+                  d="M4.352 14h5.56c1.78 0 2.22.44 2.22 2.2v4.11c0 1.76-.44 2.2-2.22 2.2h-5.56c-1.78 0-2.22-.44-2.22-2.2V16.2c0-1.76.44-2.2 2.22-2.2ZM22.132 15.5c0 3.87-3.13 7-7 7l1.05-1.75"
+                  stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M7.05 4.1 3.738 7.414M3.732 4.1l3.314 3.314" stroke="currentColor" stroke-width="1.2"
+                  stroke-linecap="round"></path>
+              </svg>
+              <span style="font-size: 1rem; color: var(--font-color);">You have made any tickets yet</span>
+            </div>
+          </div>
+          <div class="support-tab-content" id="support-tab3">
+            <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+
+              <svg class="svg-icon" viewBox="0 0 25 25" style="height: 4rem; width:4rem; color:var(--font-color)"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.132 6.06h10" stroke="currentColor" stroke-width="1.2" stroke-miterlimit="10"
+                  stroke-linecap="round" stroke-linejoin="round"></path>
+                <path
+                  d="M14.352 2.5h5.56c1.78 0 2.22.44 2.22 2.2v4.11c0 1.76-.44 2.2-2.22 2.2h-5.56c-1.78 0-2.22-.44-2.22-2.2V4.7c0-1.76.44-2.2 2.22-2.2Z"
+                  stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M2.132 17.56h10" stroke="currentColor" stroke-width="1.2" stroke-miterlimit="10"
+                  stroke-linecap="round" stroke-linejoin="round"></path>
+                <path
+                  d="M4.352 14h5.56c1.78 0 2.22.44 2.22 2.2v4.11c0 1.76-.44 2.2-2.22 2.2h-5.56c-1.78 0-2.22-.44-2.22-2.2V16.2c0-1.76.44-2.2 2.22-2.2ZM22.132 15.5c0 3.87-3.13 7-7 7l1.05-1.75"
+                  stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M7.05 4.1 3.738 7.414M3.732 4.1l3.314 3.314" stroke="currentColor" stroke-width="1.2"
+                  stroke-linecap="round"></path>
+              </svg>
+              <span style="font-size: 1rem; color: var(--font-color);">You have made any tickets yet</span>
+            </div>
+          </div>
+          <div class="support-tab-content" id="support-tab4">
+            <div class="ticket">
+              <div class="ticket-id">
+                <span style="font-size: 1.2rem; color: var(--font-color);">ID: <span
+                    style="color: var(--secondary);">LGF-854-2340</span></span>
+              </div>
+              <div class="ticket-content">
+                <div style="display: flex;flex-direction: column;gap: .3rem">
+                  <span style="font-size: 1rem; color: rgb(255, 255, 255, 0.58);">Last update</span>
+                  <span style="font-size: 1rem; color: #fff;">12.04.2024</span>
+                </div>
+                <div style="display: flex;flex-direction: column;gap: .3rem;">
+                  <span style="font-size: 1rem; color: rgb(255, 255, 255, 0.58);">Subject</span>
+                  <span style="font-size: 1rem; color: #fff;">account funding</span>
+                </div>
+                <div style="display: flex;flex-direction: column;gap: .3rem;">
+
+                </div>
+                <div style="display: flex;flex-direction: column; gap: .3rem;">
+                  <span style="font-size:1rem; color: rgb(255, 255, 255, 0.58);">Status</span>
+                  <span style="font-size:1rem; color: var(--green);">Closed</span>
+                </div>
+              </div>
+            </div>
+            <div class="ticket">
+              <div class="ticket-id">
+                <span style="font-size: 1.2rem; color: var(--font-color);">ID: <span
+                    style="color: var(--secondary);">LMK-632-09234</span></span>
+              </div>
+              <div class="ticket-content">
+                <div style="display: flex;flex-direction: column;gap: .3rem">
+                  <span style="font-size: 1rem; color: rgb(255, 255, 255, 0.58);">Last update</span>
+                  <span style="font-size: 1rem; color: #fff;">12.04.2024</span>
+                </div>
+                <div style="display: flex;flex-direction: column;gap: .3rem;">
+                  <span style="font-size: 1rem; color: rgb(255, 255, 255, 0.58);">Subject</span>
+                  <span style="font-size: 1rem; color: #fff;">account funding</span>
+                </div>
+                <div style="display: flex;flex-direction: column;gap: .3rem;">
+
+                </div>
+                <div style="display: flex;flex-direction: column; gap: .3rem;">
+                  <span style="font-size:1rem; color: rgb(255, 255, 255, 0.58);">Status</span>
+                  <span style="font-size:1rem; color: var(--green);">Closed</span>
+                </div>
+              </div>
+            </div>
+            <div class="ticket">
+              <div class="ticket-id">
+                <span style="font-size: 1.2rem; color: var(--font-color);">ID: <span
+                    style="color: var(--secondary);">VCO-933-6309</span></span>
+              </div>
+              <div class="ticket-content">
+                <div style="display: flex;flex-direction: column;gap: .3rem">
+                  <span style="font-size: 1rem; color: rgb(255, 255, 255, 0.58);">Last update</span>
+                  <span style="font-size: 1rem; color: #fff;">12.04.2024</span>
+                </div>
+                <div style="display: flex;flex-direction: column;gap: .3rem;">
+                  <span style="font-size: 1rem; color: rgb(255, 255, 255, 0.58);">Subject</span>
+                  <span style="font-size: 1rem; color: #fff;">account funding</span>
+                </div>
+                <div style="display: flex;flex-direction: column;gap: .3rem;">
+
+                </div>
+                <div style="display: flex;flex-direction: column; gap: .3rem;">
+                  <span style="font-size:1rem; color: rgb(255, 255, 255, 0.58);">Status</span>
+                  <span style="font-size:1rem; color: var(--green);">Closed</span>
+                </div>
+              </div>
+            </div>
+            <div class="ticket">
+              <div class="ticket-id">
+                <span style="font-size: 1.2rem; color: var(--font-color);">ID: <span
+                    style="color: var(--secondary);">TKO-256-61514</span></span>
+              </div>
+              <div class="ticket-content">
+                <div style="display: flex;flex-direction: column;gap: .3rem">
+                  <span style="font-size: 1rem; color: rgb(255, 255, 255, 0.58);">Last update</span>
+                  <span style="font-size: 1rem; color: #fff;">12.04.2024</span>
+                </div>
+                <div style="display: flex;flex-direction: column;gap: .3rem;">
+                  <span style="font-size: 1rem; color: rgb(255, 255, 255, 0.58);">Subject</span>
+                  <span style="font-size: 1rem; color: #fff;">account funding</span>
+                </div>
+                <div style="display: flex;flex-direction: column;gap: .3rem;">
+
+                </div>
+                <div style="display: flex;flex-direction: column; gap: .3rem;">
+                  <span style="font-size:1rem; color: rgb(255, 255, 255, 0.58);">Status</span>
+                  <span style="font-size:1rem; color: var(--green);">Closed</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
         <div class="mobile__sidebar--modal" id="mobile__sidebar--modal-5">
           <svg class="svg-icon close-mobile-modal" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -3469,42 +4539,334 @@
               </path>
             </svg>
           </span>
-          <div class="dollar-gold-bg"></div>
-          <ul class="feature-list">
-            <li class="feature-list-item">
-              <svg class="svg-icon" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="m8.424 15.666 6.329-6.33M8.84 2.824h5.807c4.838 0 6.774 1.935 6.774 6.774v5.806c0 4.839-1.936 6.774-6.774 6.774H8.84c-4.839 0-6.774-1.935-6.774-6.774V9.597c0-4.839 1.935-6.774 6.774-6.774Z"
-                  stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M8.822 10.922a1.19 1.19 0 1 0 0-2.38 1.19 1.19 0 0 0 0 2.38Zm6.326 5.537a1.19 1.19 0 1 0 .062-2.38 1.19 1.19 0 0 0-.062 2.38Z"
-                  stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-              <span class="item-description">Up to 128% APY</span>
-            </li>
-            <li class="feature-list-item">
-              <svg class="svg-icon" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M10.497 18.48a7.99 7.99 0 1 0 0-15.98 7.99 7.99 0 0 0 0 15.98ZM13.486 20.38c.9 1.27 2.37 2.1 4.05 2.1 2.73 0 4.95-2.22 4.95-4.95 0-1.66-.82-3.13-2.07-4.03"
-                  stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-              <span class="item-description">Daily Payout</span>
-            </li>
-            <li class="feature-list-item">
-              <svg class="svg-icon" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M18.809 14.05c-.42.41-.66 1-.6 1.63.09 1.08 1.08 1.87 2.16 1.87h1.9v1.19c0 2.07-1.69 3.76-3.76 3.76H7.029c-2.07 0-3.76-1.69-3.76-3.76v-6.73c0-2.07 1.69-3.76 3.76-3.76h11.48c2.07 0 3.76 1.69 3.76 3.76v1.44h-2.02c-.56 0-1.07.22-1.44.6Z"
-                  stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                  d="M3.269 12.911v-4.57c0-1.19.73-2.25 1.84-2.67l7.94-3a1.9 1.9 0 0 1 2.57 1.78v3.8M7.769 12.5h7m8.556 1.968v2.06c0 .55-.44 1-1 1.02h-1.96c-1.08 0-2.07-.79-2.16-1.87-.06-.63.18-1.22.6-1.63.37-.38.88-.6 1.44-.6h2.08c.56.02 1 .47 1 1.02Z"
-                  stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-              <span class="item-description">Instant Withdrawals</span>
-            </li>
-          </ul>
-          <div class="description-text">
-            Unlock Your Earnings Potential: Start Saving Smart!
+
+          <div class="mobile-carousel-container">
+            <div class="mobile-carousel mobile-carousel--1">
+              <div class="dollar-gold-bg"></div>
+
+              <ul class="feature-list">
+                <li class="feature-list-item">
+                  <svg class="svg-icon" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="m8.424 15.666 6.329-6.33M8.84 2.824h5.807c4.838 0 6.774 1.935 6.774 6.774v5.806c0 4.839-1.936 6.774-6.774 6.774H8.84c-4.839 0-6.774-1.935-6.774-6.774V9.597c0-4.839 1.935-6.774 6.774-6.774Z"
+                      stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                      d="M8.822 10.922a1.19 1.19 0 1 0 0-2.38 1.19 1.19 0 0 0 0 2.38Zm6.326 5.537a1.19 1.19 0 1 0 .062-2.38 1.19 1.19 0 0 0-.062 2.38Z"
+                      stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                  <span class="item-description">Up to 128% APY</span>
+                </li>
+                <li class="feature-list-item">
+                  <svg class="svg-icon" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10.497 18.48a7.99 7.99 0 1 0 0-15.98 7.99 7.99 0 0 0 0 15.98ZM13.486 20.38c.9 1.27 2.37 2.1 4.05 2.1 2.73 0 4.95-2.22 4.95-4.95 0-1.66-.82-3.13-2.07-4.03"
+                      stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                  <span class="item-description">Daily Payout</span>
+                </li>
+                <li class="feature-list-item">
+                  <svg class="svg-icon" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M18.809 14.05c-.42.41-.66 1-.6 1.63.09 1.08 1.08 1.87 2.16 1.87h1.9v1.19c0 2.07-1.69 3.76-3.76 3.76H7.029c-2.07 0-3.76-1.69-3.76-3.76v-6.73c0-2.07 1.69-3.76 3.76-3.76h11.48c2.07 0 3.76 1.69 3.76 3.76v1.44h-2.02c-.56 0-1.07.22-1.44.6Z"
+                      stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                      d="M3.269 12.911v-4.57c0-1.19.73-2.25 1.84-2.67l7.94-3a1.9 1.9 0 0 1 2.57 1.78v3.8M7.769 12.5h7m8.556 1.968v2.06c0 .55-.44 1-1 1.02h-1.96c-1.08 0-2.07-.79-2.16-1.87-.06-.63.18-1.22.6-1.63.37-.38.88-.6 1.44-.6h2.08c.56.02 1 .47 1 1.02Z"
+                      stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                  <span class="item-description">Instant Withdrawals</span>
+                </li>
+              </ul>
+              <div class="description-text">
+                Unlock Your Earnings Potential: Start Saving Smart!
+              </div>
+              <div style="display: flex; justify-content: center; gap: 1rem;">
+                <button class="mobile-carousel-btn mobile-carousel__btn--right">Next</button>
+              </div>
+
+            </div>
+            <div class="mobile-carousel mobile-carousel--2">
+              <div class="dollar-gold-bg-2">
+                <div
+                  style="padding: 1rem; border-radius: .5rem; background:rgb(41, 61, 86); width: 20rem; display: flex;gap: .4rem; flex-direction: column;">
+                  <span style="font-size: 1rem; color: var(--font-color);">Net Balance</span>
+                  <span
+                    style="padding: .8rem; align-self: center; text-align: center; width: 100%;font-size: 1.1rem; border-radius: .5rem; background: rgba(81, 207, 239, 0.45);color: #fff; ">1,000
+                    USD</span>
+                </div>
+                <span
+                  style="height: 1.5rem; width: 1.5rem; background: rgb(41, 61, 86); border-radius: 50%; display: flex;justify-content: center; align-items: center; color: gold; font-size: 1.1rem; font-weight: 200;">x</span>
+                <div
+                  style="padding: 1rem; border-radius: .5rem; background:rgb(41, 61, 86); width: 20rem; display: flex;gap: .4rem; flex-direction: column;">
+                  <span style="font-size: 1rem; color: var(--font-color);">Your APY</span>
+                  <span
+                    style="padding: .8rem; align-self: center; text-align: center; width: 100%;font-size: 1.1rem; border-radius: .5rem; background: rgba(81, 207, 239, 0.45);color: #fff; ">128%</span>
+                </div>
+                <span
+                  style="height: 1.5rem; width: 1.5rem; background: rgb(41, 61, 86); border-radius: 50%; display: flex;justify-content: center; align-items: center; color: gold; font-size: 1.1rem; font-weight: 200;">=</span>
+                <div
+                  style="padding: 1rem; border-radius: .5rem; background:rgb(41, 61, 86); width: 20rem; display: flex;gap: .4rem; flex-direction: column;">
+                  <span style="font-size: 1rem; color: var(--font-color);">Daily Payouts</span>
+                  <span
+                    style="padding: .8rem; align-self: center; text-align: center; width: 100%;font-size: 1.1rem; border-radius: .5rem; background: #4b5563;color: var(--green); ">22.00USD</span>
+                </div>
+              </div>
+
+
+              <div class="description-text">
+                Daily Payouts are Based on your investment and turnover amounts.
+              </div>
+              <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 3rem;">
+
+                <button class="mobile-carousel-btn mobile-carousel__btn--left">Back</button>
+                <button class="mobile-carousel-btn mobile-carousel__btn--right">Next</button>
+              </div>
+            </div>
+            <div class="mobile-carousel mobile-carousel--3">
+              <div class="dollar-lock-bg"></div>
+
+
+              <div class="description-text">
+                TurboSavings safeguards balances and potential profits of our clients.
+              </div>
+              <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 3rem;">
+                <button class="mobile-carousel-btn mobile-carousel__btn--left">Back</button>
+
+                <button class="mobile-carousel-btn" onclick="openMobileTurboModal()">Start Saving</button>
+              </div>
+
+            </div>
+
+
+            <div class="mobile-dots"></div>
+
           </div>
+
+
+          <div class="mobile-turbosaving-content">
+            <span class="close-mobile-turbo-modal" onclick="closeMobileTurboModal()">&times;</span>
+
+            <div class="trading-stats">
+              <div class="flex-col">
+                <h5 class="trading__stats-title">TurboSavings</h5>
+                <p class="trading__stats-text">
+                  Passive income available for everyone!
+                  Choose your savings type and earn money smart!
+                </p>
+              </div>
+              <div class="copy-trading-bg"></div>
+            </div>
+            <div class="turbo-content-container">
+
+              <div class="turbo-content">
+                <div style="background: rgb(81, 207, 239,.15); border-radius: .5rem; padding: 1rem;">
+                  <span style="font-size: 1rem; color: #fff;">Yield Calculator</span>
+                  <div style="display: flex; flex-direction: column; gap: .5rem; margin-top: 1rem;">
+                    <span style="font-size: 1rem; color: var(--font-color);">Current Net Balance</span>
+                    <div
+                      style="text-align: center; background: rgb(23, 39, 59,.3); padding: 1rem; border-radius: .5rem; color: #fff; font-size: 1.1rem; font-weight: 500;">
+                      $ 0.00</div>
+                  </div>
+                  <div style="display: flex; gap: .7rem;">
+                    <div style="display: flex; flex-direction: column; gap: .5rem; margin-top: 1rem;">
+                      <span style="font-size: 1rem; color: var(--font-color);">Savings Type</span>
+                      <div style="display: flex;">
+                        <button class="saving-btn saving-btn-1 active">Flexible</button>
+                        <button class="saving-btn saving-btn-2">Locked</button>
+                      </div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: .5rem; margin-top: 1rem; width: 100%;">
+                      <span style="font-size: 1rem; color: var(--font-color);">Period</span>
+                      <select name="period" id="period" class="period-select">
+                        <option value="7">7 days</option>
+                        <option value="30">30 days</option>
+                        <option value="365">365 days</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div style="display: flex; gap: .7rem; padding: 1rem;">
+                  <div style="display: flex; flex-direction: column; gap: .5rem; margin-top: 1rem; width: 100%;">
+                    <span style="font-size: 1rem; color: var(--font-color);">Last 30d Turnover </span>
+                    <div
+                      style="text-align: center;width: 100%; background: rgb(23, 39, 59); padding: 1rem; border-radius: .5rem; color: #fff; font-size: 1.1rem; font-weight: 500;">
+                      $ 0.00 <span
+                        style="padding: .4rem; border-radius: .5rem;background: rgb(81, 207, 239,.5);">0x</span></div>
+
+                  </div>
+                  <div style="display: flex; flex-direction: column; gap: .5rem; margin-top: 1rem; width: 100%;">
+                    <span style="font-size: 1rem; color: var(--font-color);">Deposit </span>
+                    <div
+                      style="text-align: center;width: 100%; background: rgb(23, 39, 59); padding: 1rem; border-radius: .5rem; color: #fff; font-size: 1.1rem; font-weight: 500;">
+                      $ 0.00</div>
+
+                  </div>
+                </div>
+                <div style="padding: 0rem 1rem; margin-bottom: 1rem;">
+
+                  <div
+                    style="text-align: center;width: 100%;  align-items: center; background: rgb(23, 39, 59);display: flex; justify-content: center; gap: .6rem; padding: 1rem; border-radius: .5rem; color: #fff; font-size: 1.1rem; font-weight: 500;">
+                    <span style="color: var(--font-color); font-size: 1rem;">Potential APY: <span
+                        style="color: var(--main);">8%</span></span>
+                    <span style="height: 1rem; width: 1px; background: var(--font-color);"></span>
+                    <span style="color: var(--font-color); font-size: 1rem;">365d payment: <span
+                        style="color: var(--green);">$0.00</span></span>
+
+                  </div>
+                </div>
+                <div style="padding:.3rem 1rem; margin-bottom: 1rem;">
+
+                  <button class="start-save">Start Saving</button>
+                </div>
+
+              </div>
+
+              <span
+                style="font-size: 1rem; display: inline-block; color: var(--font-color); margin-top: 2rem; margin-bottom: 1rem;">Saving
+                Rules</span>
+              <div class="saving-rules-grid">
+                <div class="side-box" style="border-top-left-radius: .5rem;">
+                  Last 30d Turnover
+                </div>
+                <div class="center-box">
+                  0x
+                </div>
+                <div class="center-box">
+                  1x
+                </div>
+                <div class="center-box">
+                  5x
+                </div>
+                <div class="center-box">
+                  10x
+                </div>
+                <div class="center-box" style="border-top-right-radius: .5rem;">
+                  50x
+                </div>
+                <div class="side-box">
+                  Flexible
+                </div>
+                <div class="center-box">
+                  1%
+                </div>
+                <div class="center-box">
+                  2%
+                </div>
+                <div class="center-box">
+                  4%
+                </div>
+                <div class="center-box">
+                  8%
+                </div>
+                <div class="center-box">
+                  16%
+                </div>
+                <div class="side-box">
+                  Locked 7D
+                </div>
+                <div class="center-box">
+                  2%
+                </div>
+                <div class="center-box">
+                  4%
+                </div>
+                <div class="center-box">
+                  8%
+                </div>
+                <div class="center-box">
+                  16%
+                </div>
+                <div class="center-box">
+                  32%
+                </div>
+                <div class="side-box">
+                  Locked 30D
+                </div>
+                <div class="center-box">
+                  4%
+                </div>
+                <div class="center-box">
+                  8%
+                </div>
+                <div class="center-box">
+                  16%
+                </div>
+                <div class="center-box">
+                  32%
+                </div>
+                <div class="center-box">
+                  64%
+                </div>
+                <div class="side-box" style="border-bottom-left-radius: .5rem;">
+                  Locked 356D
+                </div>
+                <div class="center-box">
+                  8%
+                </div>
+                <div class="center-box">
+                  16%
+                </div>
+                <div class="center-box">
+                  32%
+                </div>
+                <div class="center-box">
+                  64%
+                </div>
+                <div class="center-box" style="border-bottom-right-radius: .5rem;">
+                  128%
+                </div>
+              </div>
+
+              <div class="accordion-body">
+                <div class="accordion">
+
+                  <div class="container">
+                    <div class="label">What is TurboSavings?</div>
+                    <div class="content">TurboSavings is a straightforward way to make passive income.
+                      Invest your Net balance and earn daily yield based on your available APY percentage and options
+                      trading turnover for the past 30d.</div>
+                  </div>
+
+                  <div class="container">
+                    <div class="label">Can i withdraw instantly?</div>
+                    <div class="content">Withdrawals of the TurboSavings feature function similarly to regular
+                      withdrawals: you submit a request for a specific amount, and our finance team promptly handles it.
+                      Additionally, while TurboSavings is active, Net balance remains locked for your convenience and
+                      security.
+                    </div>
+                  </div>
+
+                  <div class="container">
+                    <div class="label">How are the payout being calculated?</div>
+                    <div class="content">Once TurboSavings is enabled, your Net balance becomes an investment that earns
+                      daily returns based on the APY percentage that can be set to Flexible or Locked, but you cannot
+                      withdraw the funds while the feature is active.
+                      An example:
+                      Your Net $1000 x APY 128% = $1280, this is your Annual income.
+                      Annual profit $1280 / 365 days = $3.50 of passive Daily income.</div>
+                  </div>
+
+                  <div class="container">
+                    <div class="label">What is APY?</div>
+                    <div class="content">APY stands for Annual Percentage Yield. It's a way to measure how much money
+                      you can earn on a deposit or investment over the course of a year. APY helps you understand how
+                      much money you can make on your savings or investments over time.
+
+                      It's important to consider APY when comparing different options to find the best way to grow your
+                      money. </div>
+                  </div>
+
+
+
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+
+
         </div>
         <div class="mobile__sidebar--modal" id="mobile__sidebar--modal-7">
           <svg class="svg-icon close-mobile-modal" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -3623,6 +4985,72 @@
               </p>
             </div>
             <div class="market-analysis-bg"></div>
+          </div>
+          <div class="mobile-market-analysis-tabs">
+            <div class="mobile-market-analysis-tab active" data-tab="mobile-market-analysis-tab1">Technical analysis
+            </div>
+            <div class="mobile-market-analysis-tab" data-tab="mobile-market-analysis-tab2">Economic Calender</div>
+            <div class="mobile-market-analysis-tab" data-tab="mobile-market-analysis-tab3">Market news</div>
+            <div class="mobile-market-analysis-tab-slider"></div>
+          </div>
+          <div class="mobile-market-analysis-tab-content active" id="mobile-market-analysis-tab1" style="height: 100%">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+              <div class="tradingview-widget-container__widget"></div>
+              <script type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+                  {
+                    "interval": "1m",
+                      "width": "100%",
+                        "isTransparent": true,
+                          "height": "100%",
+                            "symbol": "OANDA:EURUSD",
+                              "showIntervalTabs": true,
+                                "displayMode": "single",
+                                  "locale": "en",
+                                    "colorTheme": "light"
+                  }
+                </script>
+            </div>
+            <!-- TradingView Widget END -->
+          </div>
+          <div class="mobile-market-analysis-tab-content active" id="mobile-market-analysis-tab2" style="height: 100%">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+              <div class="tradingview-widget-container__widget"></div>
+              <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js"
+                async>
+                  {
+                    "width": "100%",
+                      "height": "100%",
+                        "colorTheme": "dark",
+                          "isTransparent": true,
+                            "locale": "en",
+                              "importanceFilter": "-1,0,1",
+                                "countryFilter": "ar,au,br,ca,cn,fr,de,in,id,it,jp,kr,mx,ru,sa,za,tr,gb,us,eu"
+                  }
+                </script>
+            </div>
+            <!-- TradingView Widget END -->
+          </div>
+          <div class="mobile-market-analysis-tab-content active" id="mobile-market-analysis-tab3" style="height: 100%">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+              <div class="tradingview-widget-container__widget"></div>
+              <script type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+                  {
+                    "feedMode": "all_symbols",
+                      "isTransparent": true,
+                        "displayMode": "regular",
+                          "width": "100%",
+                            "height": "100%",
+                              "colorTheme": "dark",
+                                "locale": "en"
+                  }
+                </script>
+            </div>
+            <!-- TradingView Widget END -->
           </div>
         </div>
         <div class="mobile__sidebar--modal" id="mobile__sidebar--modal-9">
@@ -4793,9 +6221,10 @@
           </div>
           <div class="mystery-box-bg">
           </div>
-          <div style="display: flex; flex-direction: column; gap: .5rem; align-items: center; justify-content: center; margin-top: 2rem;">
-       <span style="color: var(--font-color); font-size: 1rem; text-align: center;">Balance 0.00USD</span>
-       <button class="btn-add-funds grid-button" data-target="mobile__sidebar--modal-1">Add FUNDS</button>
+          <div
+            style="display: flex; flex-direction: column; gap: .5rem; align-items: center; justify-content: center; margin-top: 2rem;">
+            <span style="color: var(--font-color); font-size: 1rem; text-align: center;">Balance 0.00USD</span>
+            <button class="btn-add-funds grid-button" data-target="mobile__sidebar--modal-1">Add FUNDS</button>
           </div>
         </div>
       </div>
@@ -5802,7 +7231,8 @@
                       d="M6.44 4.006h11.11c3.56 0 4.45.88 4.45 4.39v8.21c0 3.51-.89 4.39-4.44 4.39H6.44c-3.55.01-4.44-.87-4.44-4.38v-8.22c0-3.51.89-4.39 4.44-4.39Z"
                       stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
-                  <span>Bank Cards</span></button><button class="add__fund--buttons">
+                  <span>Bank Cards</span></button>
+                <button class="add__fund--buttons">
                   <svg class="svg-icon" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2 9.003h20M6 17.005h2M10.5 17.005h4" stroke="currentColor" stroke-width="1.2"
                       stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -5810,7 +7240,8 @@
                       d="M6.44 4.006h11.11c3.56 0 4.45.88 4.45 4.39v8.21c0 3.51-.89 4.39-4.44 4.39H6.44c-3.55.01-4.44-.87-4.44-4.38v-8.22c0-3.51.89-4.39 4.44-4.39Z"
                       stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
-                  <span>Electronic payments</span></button><button class="add__fund--buttons">
+                  <span>Electronic payments</span></button>
+                <button class="add__fund--buttons">
                   <svg class="svg-icon" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2 9.003h20M6 17.005h2M10.5 17.005h4" stroke="currentColor" stroke-width="1.2"
                       stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>

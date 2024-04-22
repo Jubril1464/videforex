@@ -27,6 +27,20 @@ function updateProgress(newProgress) {
 // Example usage: update the progress to 30%
 updateProgress(30);
 
+// Payment type setter
+let paymentType = "crypto";
+const addFundButton = document.querySelectorAll(".add__fund--buttons");
+addFundButton.forEach((button) => {
+  button.addEventListener("click", () => {
+    addFundButton.forEach((active) => {
+      active.classList.remove("active");
+    });
+    button.classList.add("active");
+    paymentType = button.getAttribute("data-target");
+    console.log(paymentType);
+  });
+});
+
 document.querySelectorAll(".sidebar-link").forEach((item) => {
   item.addEventListener("click", (event) => {
     const targetModalId = item.getAttribute("data-target");
@@ -182,6 +196,8 @@ tabs.forEach((tab) => {
     targetContent.classList.add("active");
   });
 });
+
+
 const accountSettingTabs = document.querySelectorAll(".account-settings-tab");
 const accountSettingTabSlider = document.querySelector(
   ".account-settings-tab-slider"
@@ -266,6 +282,178 @@ mobileRolloverTabs.forEach(tab => {
   })
 })
 
+const marketAnalysisTabs = document.querySelectorAll(".market-analysis-tab");
+const marketAnalysisTabSlider = document.querySelector(".market-analysis-tab-slider");
+
+marketAnalysisTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const targetTab = tab.getAttribute("data-tab");
+    const targetContent = document.getElementById(targetTab);
+    const activeTab = document.querySelector(".market-analysis-tab.active");
+
+    if (activeTab) {
+      activeTab.classList.remove("active");
+    }
+
+    tab.classList.add("active");
+    marketAnalysisTabSlider.style.width = `${tab.offsetWidth}px`;
+    marketAnalysisTabSlider.style.transform = `translateX(${tab.offsetLeft}px)`;
+
+    document.querySelectorAll(".market-analysis-tab-content").forEach((content) => {
+      content.classList.remove("active");
+    });
+
+    targetContent.classList.add("active");
+  });
+});
+
+
+
+const mobileMarketAnalysisTabs = document.querySelectorAll(".mobile-market-analysis-tab");
+const mobileMarketAnalysisTabSlider = document.querySelector(
+  ".mobile-market-analysis-tab-slider"
+);
+
+mobileMarketAnalysisTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const targetTab = tab.getAttribute("data-tab");
+    const targetContent = document.getElementById(targetTab);
+    const activeTab = document.querySelector(
+      ".mobile-market-analysis-tab.active"
+    );
+
+    if (activeTab) {
+      activeTab.classList.remove("active");
+    }
+
+    tab.classList.add("active");
+    mobileMarketAnalysisTabSlider.style.width = `${tab.offsetWidth}px`;
+    mobileMarketAnalysisTabSlider.style.transform = `translateX(${tab.offsetLeft}px)`;
+
+    document
+      .querySelectorAll(".mobile-market-analysis-tab-content")
+      .forEach((content) => {
+        content.classList.remove("active");
+      });
+
+    targetContent.classList.add("active");
+  });
+});
+
+
+
+
+const currencyTabs = document.querySelectorAll(
+  ".currency-tab"
+);
+const currencyTabSlider = document.querySelector(
+  ".currency-tab-slider"
+);
+
+currencyTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const targetTab = tab.getAttribute("data-tab");
+    const targetContent = document.getElementById(targetTab);
+    const activeTab = document.querySelector(
+      ".currency-tab.active"
+    );
+
+    if (activeTab) {
+      activeTab.classList.remove("active");
+    }
+
+    tab.classList.add("active");
+    currencyTabSlider.style.width = `${tab.offsetWidth}px`;
+    currencyTabSlider.style.transform = `translateX(${tab.offsetLeft}px)`;
+
+    document
+      .querySelectorAll(".currency-tab-content")
+      .forEach((content) => {
+        content.classList.remove("active");
+      });
+
+    targetContent.classList.add("active");
+  });
+});
+
+
+
+const mobileCurrencyTabs = document.querySelectorAll(".mobile-currency-tab");
+const mobileCurrencyTabSlider = document.querySelector(".mobile-currency-tab-slider");
+
+mobileCurrencyTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const targetTab = tab.getAttribute("data-tab");
+    const targetContent = document.getElementById(targetTab);
+    const activeTab = document.querySelector(".mobile-currency-tab.active");
+
+    if (activeTab) {
+      activeTab.classList.remove("active");
+    }
+
+    tab.classList.add("active");
+    mobileCurrencyTabSlider.style.width = `${tab.offsetWidth}px`;
+    mobileCurrencyTabSlider.style.transform = `translateX(${tab.offsetLeft}px)`;
+
+    document.querySelectorAll(".mobile-currency-tab-content").forEach((content) => {
+      content.classList.remove("active");
+    });
+
+    targetContent.classList.add("active");
+  });
+});
+
+
+const supportTabs = document.querySelectorAll(".support-tab");
+const supportTabSlider = document.querySelector(".support-tab-slider");
+
+supportTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const targetTab = tab.getAttribute("data-tab");
+    const targetContent = document.getElementById(targetTab);
+    const activeTab = document.querySelector(".support-tab.active");
+
+    if (activeTab) {
+      activeTab.classList.remove("active");
+    }
+
+    tab.classList.add("active");
+   supportTabSlider.style.width = `${tab.offsetWidth}px`;
+    supportTabSlider.style.transform = `translateX(${tab.offsetLeft}px)`;
+
+    document.querySelectorAll(".support-tab-content").forEach((content) => {
+      content.classList.remove("active");
+    });
+
+    targetContent.classList.add("active");
+  });
+});
+const helpTabs = document.querySelectorAll(".help-tab");
+const helpTabSlider = document.querySelector(".help-tab-slider");
+
+helpTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const targetTab = tab.getAttribute("data-tab");
+    const targetContent = document.getElementById(targetTab);
+    const activeTab = document.querySelector(".help-tab.active");
+
+    if (activeTab) {
+      activeTab.classList.remove("active");
+    }
+
+    tab.classList.add("active");
+   helpTabSlider.style.width = `${tab.offsetWidth}px`;
+    helpTabSlider.style.transform = `translateX(${tab.offsetLeft}px)`;
+
+    document.querySelectorAll(".help-tab-content").forEach((content) => {
+      content.classList.remove("active");
+    });
+
+    targetContent.classList.add("active");
+  });
+});
+
+
 function openSidebar() {
   document.querySelector(".mobile-sidebar").style.left = "0";
   document.querySelector(".mobile-sidebar").style.width = "100dvw";
@@ -275,15 +463,7 @@ function closeSidebar() {
   document.querySelector(".mobile-sidebar").style.width = "0";
 }
 
-const addFundButton = document.querySelectorAll(".add__fund--buttons");
-addFundButton.forEach((button) => {
-  button.addEventListener("click", () => {
-    addFundButton.forEach((active) => {
-      active.classList.remove("active");
-    });
-    button.classList.add("active");
-  });
-});
+
 
 const withdrawalBtnType = document.querySelectorAll(".withdrawal-type");
 withdrawalBtnType.forEach((button) => {
@@ -707,6 +887,18 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+  const optionButtons = document.querySelectorAll(".currency-option");
+  optionButtons.forEach(button => {
+    button.addEventListener("click", () =>{
+      optionButtons.forEach(active => {
+        active.classList.remove('active')
+      });
+      button.classList.add('active');
+    })
+  })
+})
+
+document.addEventListener('DOMContentLoaded', function() {
   const openOrderBtn = document.querySelector('.open-orders')
   const downArrow = document.querySelector('.down-arrow')
   const openOrderContent = document.querySelector('.open-orders-content');
@@ -732,6 +924,220 @@ function openMobileRolloverModal(){
 function closeMobileRolloverModal(){
    const rollover = document.querySelector(".mobile-rollover-modal");
    rollover.classList.remove("active");
+}
+
+
+////// Slider
+const slider = function () {
+  
+  const slides = document.querySelectorAll('.carousel');
+  const btnLeft = document.querySelectorAll('.carousel__btn--left');
+  const btnRight = document.querySelectorAll('.carousel__btn--right');
+  const dotContainer = document.querySelector('.dots');
+  // slider.style.transform = 'scale(0.4) translateX(-800px)'
+  // slider.style.overflow = 'visible'
+  // slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`))
+  let curSlide = 0;
+  const maxSlide = slides.length;
+
+  const createDots = function () {
+    slides.forEach(function (_, i) {
+      dotContainer.insertAdjacentHTML(
+        'beforeend',
+        `<button class="dots__dot" data-slide ="${i}"></button>`
+      );
+    });
+  };
+
+  const activateDot = function (slide) {
+    document
+      .querySelectorAll('.dots__dot')
+      .forEach(dot => dot.classList.remove('dots__dot--active'));
+
+    document
+      .querySelector(`.dots__dot[data-slide = "${slide}"]`)
+      .classList.add('dots__dot--active');
+  };
+  const goToSlide = function (slide) {
+    slides.forEach(
+      (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+    );
+  };
+
+  /// Next Slide
+  const nextSlide = function () {
+    if (curSlide === maxSlide - 1) curSlide = 0;
+    else curSlide++;
+
+    goToSlide(curSlide);
+    activateDot(curSlide);
+    
+  };
+
+  const prevSlide = function () {
+    if (curSlide === 0) curSlide = maxSlide - 1;
+    else curSlide--;
+
+    goToSlide(curSlide);
+    activateDot(curSlide);
+  };
+  const init = function () {
+    goToSlide(0);
+    createDots();
+
+    activateDot(0);
+  };
+  init();
+  //////// Event Handler
+  btnLeft.forEach(btn => {
+    btn.addEventListener('click', prevSlide);
+  })
+  btnRight.forEach(btn => {
+    btn.addEventListener('click', nextSlide);
+  })
+
+  document.addEventListener('keydown', function (e) {
+    console.log(e);
+    if (e.key === 'ArrowLeft') prevSlide();
+    e.key === 'ArrowRight' && nextSlide();
+  });
+  dotContainer.addEventListener('click', function (e) {
+    if (e.target.classList.contains('dots__dot')) {
+      const { slide } = e.target.dataset;
+      goToSlide(slide);
+      activateDot(slide);
+    }
+  });
+}
+slider();
+
+
+
+
+
+
+////// Slider
+const mobileSlider = function () {
+  
+  const slides = document.querySelectorAll('.mobile-carousel');
+  const btnLeft = document.querySelectorAll('.mobile-carousel__btn--left');
+  const btnRight = document.querySelectorAll('.mobile-carousel__btn--right');
+  const dotContainer = document.querySelector('.mobile-dots');
+  // slider.style.transform = 'scale(0.4) translateX(-800px)'
+  // slider.style.overflow = 'visible'
+  // slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`))
+  let curSlide = 0;
+  const maxSlide = slides.length;
+
+  const createDots = function () {
+    slides.forEach(function (_, i) {
+      dotContainer.insertAdjacentHTML(
+        'beforeend',
+        `<button class="mobile-dots__dot" data-slide ="${i}"></button>`
+      );
+    });
+  };
+
+  const activateDot = function (slide) {
+    document
+      .querySelectorAll('.mobile-dots__dot')
+      .forEach(dot => dot.classList.remove('mobile-dots__dot--active'));
+
+    document
+      .querySelector(`.mobile-dots__dot[data-slide = "${slide}"]`)
+      .classList.add('mobile-dots__dot--active');
+  };
+  const goToSlide = function (slide) {
+    slides.forEach(
+      (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+    );
+  };
+
+  /// Next Slide
+  const nextSlide = function () {
+    if (curSlide === maxSlide - 1) curSlide = 0;
+    else curSlide++;
+
+    goToSlide(curSlide);
+    activateDot(curSlide);
+    
+  };
+
+  const prevSlide = function () {
+    if (curSlide === 0) curSlide = maxSlide - 1;
+    else curSlide--;
+
+    goToSlide(curSlide);
+    activateDot(curSlide);
+  };
+  const init = function () {
+    goToSlide(0);
+    createDots();
+
+    activateDot(0);
+  };
+  init();
+  //////// Event Handler
+  btnLeft.forEach(btn => {
+    btn.addEventListener('click', prevSlide);
+  })
+  btnRight.forEach(btn => {
+    btn.addEventListener('click', nextSlide);
+  })
+
+  document.addEventListener('keydown', function (e) {
+    console.log(e);
+    if (e.key === 'ArrowLeft') prevSlide();
+    e.key === 'ArrowRight' && nextSlide();
+  });
+  dotContainer.addEventListener('click', function (e) {
+    if (e.target.classList.contains('mobile-dots__dot')) {
+      const { slide } = e.target.dataset;
+      goToSlide(slide);
+      activateDot(slide);
+    }
+  });
+}
+mobileSlider();
+
+
+
+function openTurboModal() {
+  const turboContent = document.querySelector(".turbosaving-content");
+  turboContent.style.display = 'block'
+}
+function closeTurboModal() {
+   const turboContent = document.querySelector(".turbosaving-content");
+   turboContent.style.display = "none";
+}
+function openMobileTurboModal() {
+  const turboContent = document.querySelector(".mobile-turbosaving-content");
+  turboContent.style.display = 'block'
+}
+function closeMobileTurboModal() {
+   const turboContent = document.querySelector(".mobile-turbosaving-content");
+   turboContent.style.display = "none";
+}
+
+document.addEventListener("DOMContentLoaded",function() {
+  const savingBtns = document.querySelectorAll('.saving-btn')
+
+  savingBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      savingBtns.forEach(active => {
+        active.classList.remove('active')
+      });
+      btn.classList.add('active')
+    })
+  })
+})
+
+const accordion = document.getElementsByClassName("container");
+
+for (i = 0; i < accordion.length; i++) {
+  accordion[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+  });
 }
 
 //  const input = document.getElementById("quantity");
